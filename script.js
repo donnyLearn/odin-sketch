@@ -11,8 +11,6 @@ function generateGrid(gridCount) {
 			div.addEventListener('mouseenter', () => {
 				let opc = parseFloat(div.style.opacity) - .25;
 				opc = Math.max(opc, 0);
-				console.log(div.style.opacity);
-				console.log(opc);
 				div.style.opacity = opc.toString(); 
 			});
 			div.classList.add('gridCell');
@@ -35,6 +33,9 @@ const resetButton = document.querySelector('#reset');
 resetButton.addEventListener('click', () => {
 	var gridCount = prompt("Number of grid [1-100]: ");
 	while(gridCount < 1 || gridCount > 100) {
+		if(gridCount === null) {
+			return;
+		} 
 		gridCount = prompt("Grid must be from 1-100: ");
 	}
 	resetGrid();
