@@ -1,0 +1,21 @@
+* {
+	/*border: 1px solid red;*/
+	text-align: center;
+}
+
+#container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#reset {
+	height: 100px;
+	width: 300px;
+	font-size: 24px;
+}
+
+.gridCell {
+	background-color: black;
+	border: 1px solid red;
+}
